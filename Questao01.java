@@ -7,7 +7,7 @@ public class Questao01 {
         Scanner sc = new Scanner(System.in);
 
         try {
-
+aaaaaaaaaaaaaaaaa
             System.out.print("Primeiro número: ");
 
             int a = sc.nextInt();
