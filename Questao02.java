@@ -28,7 +28,7 @@ public class Questao02 {
 
         } catch (Exception e) {
 
-            System.out.println("Idade inválida!");
+            System.out.println("Erro, Digite idade completa e sem letras. ");
 
         }
 
