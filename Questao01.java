@@ -21,6 +21,10 @@ public class Questao01 {
             System.out.println("Subtração: " + (a - b));
 
             System.out.println("Multiplicação: " + (a * b));
-            
+        } catch (java.util.InputMismatchException e) {
+            System.out.println("Entrada inválida.");
+        } finally {
+            sc.close();
+        }
+    }
 }
-    
