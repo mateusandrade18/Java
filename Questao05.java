@@ -5,86 +5,75 @@ controlar o fluxo, Scanner para entrada e try/catch para tratamento de erros.
 */
 import java.util.Scanner;
 import java.util.InputMismatchException;
-
 public class Questao05 {
     public static void main(String[] args) {
+     Scanner ler = new Scanner(System.in);
+     int opcao = 0;
 
-        Scanner ler = new Scanner(System.in);
-        int opcao = 0;
 
-        while (opcao != 4) {
+     while (opcao !=4){
 
-            System.out.println("\n1 - Calcular área do quadrado.");
-            System.out.println("2 - Calcular área do círculo.");
-            System.out.println("3 - Calcular perímetro do retângulo.");
-            System.out.println("4 - Sair.");
-            System.out.print("Escolha uma opção: ");
+        System.out.println("1 - Calcular área do quadrado.");
+        System.out.println("2 - Calcular área do círculo.");
+        System.out.println("3 - Calcular perímetro do retângulo.");
+        System.out.println("4 - Sair.");
 
-            try {
+        try {
 
-                opcao = ler.nextInt();
+        opcao = ler.nextInt();
 
-                switch (opcao) {
+        switch (opcao) {
+            case 1:
+                System.out.print("Digite o lado do quadrado: ");
+                double lado = ler.nextDouble();
+                double area = lado * lado;
+                System.out.println("A área do quadrado é: " + area);
+                break; 
+        
+            case 2:
+                System.out.print("Digite o raio desse círculo: ");
+                double raio = ler.nextDouble();
+                double areaCirculo = Math.PI * raio * raio;
+                System.out.println("A área desse círculo é: " + areaCirculo);
 
-                    case 1:
-                        try {
-                            System.out.print("Digite o lado do quadrado: ");
-                            double lado = ler.nextDouble();
+                break;
 
-                            double area = lado * lado;
-                            System.out.println("A área do quadrado é: " + area);
+            case 3:
+                System.out.print("Digite a base desse retângulo: ");
+                double baseRetangulo = ler.nextDouble();
 
-                        } catch (InputMismatchException e) {
-                            System.out.println("Digite apenas números.");
-                            ler.next();
-                        }
-                        break;
+                System.out.print("Digite a altura desse retângulo: ");
+                double alturaRetangulo = ler.nextDouble();
 
-                    case 2:
-                        try {
-                            System.out.print("Digite o raio do círculo: ");
-                            double raio = ler.nextDouble();
+                double perimetro = 2 * (baseRetangulo + alturaRetangulo);
+                System.out.println("O perímetro desse retângulo é: " + perimetro);
+                break;
+                
+             case 4:
+                System.out.println("Saindo do programa...");
 
-                            double areaCirculo = Math.PI * raio * raio;
-                            System.out.println("A área do círculo é: " + areaCirculo);
+                break; 
 
-                        } catch (InputMismatchException e) {
-                            System.out.println("Digite apenas números.");
-                            ler.next();
-                        }
-                        break;
+             default:
+                System.out.println("Opção inválida! Digite uma opção de 1 a 4.");
+                break;     
 
-                    case 3:
-                        try {
-                            System.out.print("Digite a base do retângulo: ");
-                            double base = ler.nextDouble();
+                
+          }
 
-                            System.out.print("Digite a altura do retângulo: ");
-                            double altura = ler.nextDouble();
+        }
+          catch (InputMismatchException e) {
+        System.out.println("Digite apenas número, voltando ao menu: ");
+        ler.next();
 
-                            double perimetro = 2 * (base + altura);
-                            System.out.println("O perímetro é: " + perimetro);
+          }
 
-                        } catch (InputMismatchException e) {
-                            System.out.println("Digite apenas números.");
-                            ler.next();
-                        }
-                        break;
-
-                    case 4:
-                        System.out.println("Saindo do programa...");
-                        break;
-
-                    default:
-                        System.out.println("Opção inválida! Digite de 1 a 4.");
-                }
-
-            } catch (InputMismatchException e) {
-                System.out.println("Digite apenas números no menu.");
-                ler.next();
-            }
+        
         }
 
         ler.close();
+
+
     }
+    
 }
