@@ -9,9 +9,8 @@ import java.util.InputMismatchException;
 public class Vetor {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-
+      
         System.out.print("Digite a Quantidade de Alunos: ");
-
         int quantidadedeAlunos = sc.nextInt();
         System.out.println("Quantidade digitada:" + quantidadedeAlunos);
 
@@ -58,7 +57,7 @@ public class Vetor {
             System.out.printf("Média da turma: %.2f\n", mediaTurma);
             System.out.println("Menor nota: " + menorNota);
             System.out.println("Maior nota: " + maiorNota);
-            System.out.println("Alunos aprovados (Nota >= 6.0): " + aprovados);
+            System.out.println("Alunos aprovados (Nota >= 6.0):"  + aprovados);
             System.out.println("Alunos reprovados: " + (quantidadedeAlunos - aprovados));
         } else {
             System.err.println("\n\nNenhum Aluno Cadastrado.");
