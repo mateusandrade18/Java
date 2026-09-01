@@ -9,6 +9,7 @@ o programa deve informar ao usuário
 quando ele tentar cadastrar um nome já
 existente. Utilize um menu com switch,
 repetição com while e tratamento de erros com try/catch. */
+
 import java.util.HashSet;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -97,9 +98,9 @@ public class Vetor05 {
         }
  
  
-                } // fecha chaves do switch
+                } 
             }
-           } // fecha o try
+           } 
  
           catch (InputMismatchException e) {
     System.out.println("Erro: digite apenas valores numéricos válidos.");
